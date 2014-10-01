@@ -1,5 +1,7 @@
 FROM mastersrp/funtoo:latest
+MAINTAINER necrophcodr <necrophcodr@protonmail.ch>
 
+WORKDIR /
 RUN eix-sync && emerge -v nginx
 RUN rm -rf /etc/skel/ && mkdir -p /etc/skel
 ADD . /
