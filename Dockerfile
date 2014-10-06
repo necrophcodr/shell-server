@@ -2,7 +2,7 @@ FROM mastersrp/funtoo:latest
 MAINTAINER necrophcodr <necrophcodr@protonmail.ch>
 
 WORKDIR /
-RUN eix-sync && emerge -v nginx
+RUN eix-sync && emerge -v nginx runit
 RUN rm -rf /etc/skel/ && mkdir -p /etc/skel && \
 rm -rf /etc/nginx/ && mkdir -p /etc/nginx && \
 mkdir -p /var/www && \
